@@ -1,13 +1,19 @@
 package com.employee.api.runner;
 
+import com.employee.api.entity.Department;
+import com.employee.api.entity.Employee;
+import com.employee.api.repository.DepartmentRepository;
 import com.employee.api.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
-@Profile("local")
+@Profile("test")
 public class EmpDepInsertRunner implements ApplicationRunner {
     @Autowired
     DepartmentRepository departmentRepository;
